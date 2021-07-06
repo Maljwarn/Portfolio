@@ -1,0 +1,85 @@
+$header1: 2.5rem;
+$header2: 4rem;
+$header3: 2.5rem;
+$header4: 2rem;
+$text: 2.5rem;
+// $gradient: linear-gradient(to left, #8a11e7, #07f0e2);
+$background-color: #1c94a4;
+$grey-text: #2c2c2c;
+$color: #07f0e2;
+$color2: #1c94a4;
+
+@mixin flex($justify, $align, $direction) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: $direction;
+}
+
+@import "global";
+@import "intro";
+@import "projects";
+@import "contact";
+@import "footer";
+
+@media screen and (max-width: 1332px) {
+  html {
+    font-size: 53%;
+  }
+
+  .svg {
+    width: 80%;
+  }
+  nav {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 638px) {
+  html {
+    font-size: 45%;
+  }
+  .svg {
+    width: 90vw;
+    margin: auto;
+  }
+  .main-head {
+    margin: auto;
+    width: 90vw;
+  }
+  nav {
+    .Logo {
+      @include flex(center, center, column);
+      flex: 1 1 20rem;
+      margin-top: 2rem;
+    }
+    ul {
+      flex: 1 1 60rem;
+      margin: 2rem 0rem;
+    }
+  }
+  .intro-text {
+    margin-top: 5rem;
+    text-align: center;
+  }
+  .intro-img {
+    text-align: center;
+  }
+  .intro-social {
+    @include flex(center, center, row);
+    a {
+      margin: 2rem;
+    }
+  }
+  .elena-joy,
+  .travelly {
+    flex: 1 1 50rem;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+    form {
+      padding: 0rem;
+      width: 100%;
+    }
+  }
+}

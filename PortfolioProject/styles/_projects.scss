@@ -1,0 +1,35 @@
+// PROJECTS
+
+.projects {
+  width: 90vw;
+  margin: auto;
+  min-height: 90vh;
+  @include flex(space-between, center, row);
+  flex-wrap: wrap;
+
+  h2 {
+    margin: 5rem;
+  }
+  h3 {
+    margin: 3rem;
+  }
+}
+.project-box {
+  @include flex(space-between, center, column);
+  width: 90vw;
+  margin: 2rem;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1), 0px 0px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 2rem;
+  padding: 10px;
+}
+.img-box {
+  width: 50vw;
+
+  margin: 2rem;
+  border-radius: 2rem;
+}
+
+.project-decs {
+  min-width: 30vw;
+  @include flex(space-between, center, row);
+}

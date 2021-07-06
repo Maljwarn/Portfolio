@@ -1,0 +1,218 @@
+// HOMEPAGE
+
+.main-head {
+  width: 100%;
+  margin: 0 0 0 auto;
+  // box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1), 0px 0px 20px rgba(0, 0, 0, 0.1);
+  background-color: #b5d9d9;
+  z-index: 100;
+}
+
+// NAVIATION
+
+nav {
+  @include flex(space-between, center, row);
+  min-height: 10vh;
+  padding: 1rem;
+  // padding-left: 5%;
+  flex-wrap: wrap;
+  background-color: #b5d9d9;
+
+  .logo {
+    @include flex(flex-start, center, row);
+    flex: 1 1 10rem;
+    h1 {
+      margin: 2rem;
+    }
+  }
+  ul {
+    @include flex(space-around, center, row);
+    flex: 1 1 40rem;
+  }
+}
+.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.sticky #bar {
+  margin-top: 1.8rem;
+}
+
+// INTRO
+.intro {
+  min-height: 90vh;
+  width: 90%;
+  margin: auto;
+  flex-wrap: wrap;
+  @include flex(space-between, center, row);
+  h2 {
+    font-size: 8rem;
+    padding-top: 2rem;
+    background: linear-gradient($color, $color2);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+  }
+  h3 {
+    font-size: 6rem;
+    padding: 2rem 0rem;
+  }
+  p {
+    padding-top: 2rem;
+    color: $grey-text;
+  }
+}
+
+.intro-social {
+  margin-top: 4rem;
+  a {
+    margin-right: 5rem;
+  }
+}
+.active {
+  background: $color2;
+  color: white;
+  padding: 1rem 3rem;
+  border-radius: 2rem;
+}
+.intro-text,
+.intro-images {
+  flex: 1 1 40rem;
+}
+
+.intro-images {
+  width: 90vw;
+  margin: auto;
+}
+
+// ANIMATIONS
+
+#lef1 {
+  -webkit-animation: plant1 1.5s ease-in-out infinite alternate 0.5s;
+  animation: plant1 1.5s ease-in-out infinite alternate 0.5s;
+  transform-origin: bottom;
+}
+#lef2 {
+  -webkit-animation: plant2 2s ease-in-out infinite alternate 0.5s;
+  animation: plant2 2s ease-in-out infinite alternate 0.5s;
+  transform-origin: bottom;
+}
+#lef3 {
+  -webkit-animation: plant3 3s ease-in-out infinite alternate 0.5s;
+  animation: plant3 3s ease-in-out infinite alternate 0.5s;
+  transform-origin: bottom;
+}
+#me {
+  -webkit-animation: me 2s ease-in-out infinite alternate;
+  animation: me 2s ease-in-out infinite alternate;
+  transform-origin: bottom;
+}
+
+#ClockArm {
+  -webkit-animation: clock 4s infinite linear;
+  animation: clock 4s infinite linear;
+  transform-origin: bottom;
+  transform-box: fill-box;
+}
+
+@-webkit-keyframes plant1 {
+  from {
+    transform: rotateZ(-3deg);
+  }
+  to {
+    transform: rotateZ(3deg);
+  }
+}
+
+@-webkit-keyframes plant1 {
+  from {
+    transform: rotateZ(-1deg);
+  }
+  to {
+    transform: rotateZ(1deg);
+  }
+}
+
+@keyframes plant1 {
+  from {
+    transform: rotateZ(-1deg);
+  }
+  to {
+    transform: rotateZ(1deg);
+  }
+}
+
+@-webkit-keyframes plant2 {
+  from {
+    transform: rotateZ(-2deg);
+  }
+  to {
+    transform: rotateZ(2deg);
+  }
+}
+
+@keyframes plant2 {
+  from {
+    transform: rotateZ(-2deg);
+  }
+  to {
+    transform: rotateZ(2deg);
+  }
+}
+
+@-webkit-keyframes plant3 {
+  from {
+    transform: rotateZ(-4deg);
+  }
+  to {
+    transform: rotateZ(4deg);
+  }
+}
+
+@keyframes plant3 {
+  from {
+    transform: rotateZ(-4deg);
+  }
+  to {
+    transform: rotateZ(4deg);
+  }
+}
+
+@-webkit-keyframes me {
+  from {
+    transform: rotateZ(-3deg);
+  }
+  to {
+    transform: rotateZ(3deg);
+  }
+}
+
+@keyframes me {
+  from {
+    transform: rotateZ(-3deg);
+  }
+  to {
+    transform: rotateZ(3deg);
+  }
+}
+
+@-webkit-keyframes clock {
+  from {
+    transform: rotateZ(0deg);
+  }
+  to {
+    transform: rotateZ(360deg);
+  }
+}
+
+@keyframes clock {
+  from {
+    transform: rotateZ(0deg);
+  }
+  to {
+    transform: rotateZ(360deg);
+  }
+}
